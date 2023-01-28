@@ -41,6 +41,8 @@ header nav .logo a {
     color: #000;
     font-size: 32px;
     text-decoration: none;
+    font-weight: 600;
+    font-style: italic;
 }
 
 header nav ul {
@@ -58,6 +60,22 @@ header nav ul li a {
     text-decoration: none;
     font-weight: 500;
     color: #7B2869;
+    position: relative;
+}
+
+header nav ul li a::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    background-color: #7B2869;
+    height: 1px;
+    transition: all 0.2s ease-in-out;
+}
+
+header nav ul li a:hover::before {
+    width: 100%;
 }
 
 .mainSection {
@@ -72,7 +90,7 @@ header nav ul li a {
     flex-direction: column;
     position: relative;
     text-align: center;
-
+    background-attachment: fixed;
 }
 
 .mainSection::before {
@@ -80,4 +98,24 @@ header nav ul li a {
     position: absolute;
     inset: 0;
     background-color: rgba(0, 0, 0, 0.5);
+}
+
+.mainSection .container {
+    position: relative;
+    z-index: 1;
+}
+
+.mainSection .container .row {
+    justify-content: center;
+}
+
+.mainSection h1 {
+    font-size: 52px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+
+.mainSection p {
+    font-size: 20px;
+    margin: 0;
 }
