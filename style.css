@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;700;900&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+    background-color: #000;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 90%;
+    width: 100%;
+    margin: 0 auto 0 auto;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.col {
+    width: 48%;
+}
+
+header {
+    background-color: #fff;
+
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header nav .logo a {
+    color: #000;
+    font-size: 32px;
+    text-decoration: none;
+}
+
+header nav ul {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+header nav ul li {
+    padding: 0 10px;
+}
+
+header nav ul li a {
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: 500;
+    color: #7B2869;
+}
+
+.mainSection {
+    height: 100vh;
+    background-image: url("mainBanner.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    text-align: center;
+
+}
+
+.mainSection::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
